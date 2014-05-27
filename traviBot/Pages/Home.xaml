@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="traviBot.Pages.Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Style="{StaticResource ContentRoot}">
+        <mui:ModernTab Layout="List" SelectedSource="/Content/queue.xaml" Grid.ColumnSpan="2">
+            <mui:ModernTab.Links>
+                <mui:Link DisplayName="Global queue" Source="/Content/queue.xaml" />
+                <mui:Link DisplayName="Browser" Source="/Content/browser.xaml" />
+                <mui:Link DisplayName="Buildings" Source="/Content/buildings.xaml" />
+                <mui:Link DisplayName="Resource fields" Source="/Content/rfields.xaml" />
+                <mui:Link DisplayName="Market" Source="/Content/market.xaml" />
+                <mui:Link DisplayName="Military" Source="/Content/military.xaml" />
+                <mui:Link DisplayName="Auto farming" Source="/Content/autofarm.xaml" />
+                <mui:Link DisplayName="Statistics and logging" Source="/Content/stats.xaml" />
+            </mui:ModernTab.Links>
+        </mui:ModernTab>
+    </Grid>
+</UserControl>
