@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="traviBot.Content.MapWIndow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="600">
+    <Grid Margin="0,0,-102,0">
+        <TabControl HorizontalAlignment="Stretch" Height="380" Margin="10,10,86,0" VerticalAlignment="Top" Width="Auto">
+            <TabItem Header="Animal finder">
+                <Grid Background="#FFE5E5E5" Margin="0" HorizontalAlignment="Left" Width="545">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="14*"/>
+                        <ColumnDefinition Width="271*"/>
+                    </Grid.ColumnDefinitions>
+                    <RichTextBox x:Name="richTextBox1" HorizontalAlignment="Left" Height="328" Margin="10,10,0,0" VerticalAlignment="Top" Width="331" Grid.ColumnSpan="2" IsReadOnly="true">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text=""/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <ComboBox x:Name="comboBoxAnimals" Grid.Column="1" HorizontalAlignment="Left" Margin="333,95,0,0" VerticalAlignment="Top" Width="120">
+                        <ComboBoxItem Content="Medved" HorizontalAlignment="Left" Width="118"/>
+                        <ComboBoxItem Content="Krokodil" HorizontalAlignment="Left" Width="118"/>
+                        <ComboBoxItem Content="Tiger" HorizontalAlignment="Left" Width="118"/>
+                        <ComboBoxItem Content="Slon" HorizontalAlignment="Left" Width="118"/>
+                    </ComboBox>
+                    <Label Content="Select animal:" Grid.Column="1" HorizontalAlignment="Left" Margin="333,74,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Distance:" Grid.Column="1" HorizontalAlignment="Left" Margin="333,122,0,0" VerticalAlignment="Top"/>
+                    <ComboBox x:Name="comboBoxDistance" Grid.Column="1" HorizontalAlignment="Left" Margin="333,143,0,0" VerticalAlignment="Top" Width="120">
+                        <ComboBoxItem Content="5" HorizontalAlignment="Left" Width="118"/>
+                        <ComboBoxItem Content="10" HorizontalAlignment="Left" Width="118"/>
+                        <ComboBoxItem Content="15" HorizontalAlignment="Left" Width="118"/>
+                        <ComboBoxItem Content="20" HorizontalAlignment="Left" Width="118"/>
+                        <ComboBoxItem Content="25" HorizontalAlignment="Left" Width="118"/>
+                        <ComboBoxItem Content="50" HorizontalAlignment="Left" Width="118"/>
+                    </ComboBox>
+                    <Button Content="Search" Grid.Column="1" HorizontalAlignment="Left" Margin="354,200,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="TabItem">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

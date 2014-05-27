@@ -17,6 +17,7 @@
                 <mui:Link DisplayName="Military" Source="/Content/military.xaml" />
                 <mui:Link DisplayName="Auto farming" Source="/Content/autofarm.xaml" />
                 <mui:Link DisplayName="Statistics and logging" Source="/Content/stats.xaml" />
+                <mui:Link DisplayName="Map" Source="/Content/MapWindow.xaml" />
             </mui:ModernTab.Links>
         </mui:ModernTab>
     </Grid>

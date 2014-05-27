@@ -93,6 +93,8 @@
     <Compile Include="Content\Villages.xaml.cs">
       <DependentUpon>Villages.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Map.cs" />
+    <Compile Include="MapWIndow.xaml.cs" />
     <Compile Include="Market.cs" />
     <Compile Include="Content\autofarm.xaml.cs">
       <DependentUpon>autofarm.xaml</DependentUpon>
@@ -136,6 +138,10 @@
       <DependentUpon>SettingsAppearance.xaml</DependentUpon>
     </Compile>
     <Compile Include="Content\SettingsAppearanceViewModel.cs" />
+    <Page Include="MapWIndow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -165,7 +171,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
