@@ -19,8 +19,8 @@ namespace traviBot
         private IWebDriver driver;
         public string villageName { get; set; }
         public string villageID { get; set; }
-        public string x { get; set; }
-        public string y { get; set; }
+        public string x;
+        public string y;
         public string lumber { get; set; }
         public string clay { get; set; } 
         public string iron { get; set; }

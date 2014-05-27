@@ -28,7 +28,7 @@ namespace traviBot.Content
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Map elephants= new Map();
-            richTextBox1.AppendText(elephants.animalFinder(int.Parse(comboBoxDistance.Text), new Village("","","-51","33"), comboBoxAnimals.Text));
+            richTextBox1.AppendText(elephants.animalFinder(int.Parse(comboBoxDistance.Text), Account.villages[0], comboBoxAnimals.Text));
         }
     }
 }

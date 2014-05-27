@@ -78,7 +78,7 @@ namespace traviBot
                     // Parse name and id
                     name = Account.driver.FindElement(By.Id("sidebarBoxVillagelist")).FindElement(By.ClassName("sidebarBoxInnerBox")).FindElements(By.TagName("li"))[count].FindElement(By.ClassName("name")).Text;
                     id = Account.driver.FindElement(By.Id("sidebarBoxVillagelist")).FindElement(By.ClassName("sidebarBoxInnerBox")).FindElements(By.TagName("li"))[count].FindElement(By.TagName("a")).GetAttribute("href");
-                    id = id.Replace("&","").Split('=')[1];
+                    id = id.Replace("&", "").Split('=')[1];
 
 
                     //Parse X
@@ -86,11 +86,22 @@ namespace traviBot
                     x = Account.driver.FindElement(By.Id("sidebarBoxVillagelist")).FindElement(By.ClassName("sidebarBoxInnerBox")).FindElements(By.TagName("li"))[count].FindElement(By.ClassName("coordinateX")).Text;
 
                     x = x.Replace("(", "");
+                    bool negative = x.Contains('-');
+                                
+                    x = new string(x.Where(c => char.IsDigit(c)).ToArray());
+                    if (negative) {
+                        x = "-" + x;
+                    }
 
                     //Parse Y
-
                     y = Account.driver.FindElement(By.Id("sidebarBoxVillagelist")).FindElement(By.ClassName("sidebarBoxInnerBox")).FindElements(By.TagName("li"))[count].FindElement(By.ClassName("coordinateY")).Text;
+
                     y = y.Replace(")", "");
+                    negative = y.Contains('-');
+                    y = new string(y.Where(c => char.IsDigit(c)).ToArray());
+                    if (negative) {
+                        y = "-" + y;
+                    }
 
                     Village vil = new Village(id, name, x, y);
                     vil.setNoOfResources();

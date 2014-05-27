@@ -11,6 +11,7 @@ using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.UI;
 using Selenium;
 using OpenQA.Selenium;
+using System.Globalization;
 
 
 namespace traviBot
@@ -20,11 +21,10 @@ namespace traviBot
         Village village;
         IWebDriver driver;
 
-        public string animalFinder(int distance, Village village, string animal)
+        public string animalFinder(int distance, Village _village, string _animal)
         {
-            this.village = village;
+            this.village = _village;
             this.driver = Account.driver;
-
             string tmp = "";
 
 
@@ -38,7 +38,7 @@ namespace traviBot
 
                     if (str[2].Contains("Ropaj nezasedeno oazo"))
                     {
-                        switch (animal)
+                        switch (_animal)
                         {
                             case "Medved":
                                 if (fullstring.Contains("Medvedov"))
