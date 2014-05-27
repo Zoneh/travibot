@@ -87,6 +87,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Content\MapWIndow.xaml.cs">
+      <DependentUpon>MapWIndow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Content\queue.xaml.cs">
       <DependentUpon>queue.xaml</DependentUpon>
     </Compile>
@@ -94,7 +97,6 @@
       <DependentUpon>Villages.xaml</DependentUpon>
     </Compile>
     <Compile Include="Map.cs" />
-    <Compile Include="MapWIndow.xaml.cs" />
     <Compile Include="Market.cs" />
     <Compile Include="Content\autofarm.xaml.cs">
       <DependentUpon>autofarm.xaml</DependentUpon>
@@ -106,6 +108,10 @@
       <DependentUpon>LoginUI.xaml</DependentUpon>
     </Compile>
     <Compile Include="Village.cs" />
+    <Page Include="Content\MapWIndow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Content\queue.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -138,10 +144,6 @@
       <DependentUpon>SettingsAppearance.xaml</DependentUpon>
     </Compile>
     <Compile Include="Content\SettingsAppearanceViewModel.cs" />
-    <Page Include="MapWIndow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Pages\Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
